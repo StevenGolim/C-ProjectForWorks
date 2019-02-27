@@ -156,6 +156,30 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="C++TestRidi.cpp" />
+    <ClCompile Include="Character\Character.cpp" />
+    <ClCompile Include="Character\NonPlayerCharacter.cpp" />
+    <ClCompile Include="Character\PlayerCharacter.cpp" />
+    <ClCompile Include="GameManager\GameManager.cpp" />
+    <ClCompile Include="Scenes\BaseScene.cpp" />
+    <ClCompile Include="Scenes\GameScene.cpp" />
+    <ClCompile Include="Scenes\JudgeScene.cpp" />
+    <ClCompile Include="Scenes\ResultScene.cpp" />
+    <ClCompile Include="Scenes\TitleScene.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Character\Character.h" />
+    <ClInclude Include="Character\NonPlayerCharacter.h" />
+    <ClInclude Include="Character\PlayerCharacter.h" />
+    <ClInclude Include="GameManager\GameManager.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Scenes\BaseScene.h" />
+    <ClInclude Include="Scenes\GameScene.h" />
+    <ClInclude Include="Scenes\JudgeScene.h" />
+    <ClInclude Include="Scenes\ResultScene.h" />
+    <ClInclude Include="Scenes\TitleScene.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="C++TestRidi.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
