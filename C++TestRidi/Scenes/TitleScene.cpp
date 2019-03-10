@@ -16,5 +16,5 @@ void TitleScene::Update()
 	std::cout << "じゃんけんゲーム....................Sでスタート" << std::endl;
 	char play;
 	std::cin >> play;
-	if (play == 's') { gameM->ChangeScene(GameManager::Scene::GAME); }
+	if (play == 's') { GameManager::getInstance()->ChangeScene(GameManager::Scene::GAME); }
 }

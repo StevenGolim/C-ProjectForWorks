@@ -14,7 +14,7 @@ private:
 public:
 	JudgeScene();
 	~JudgeScene();
-	void show_winner(Move user, Move comp);
+	void ShowWinner(Move user, Move comp);
 	void Update();
 };
 

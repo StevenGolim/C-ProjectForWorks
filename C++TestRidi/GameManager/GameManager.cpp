@@ -1,14 +1,16 @@
 #include "GameManager.h"
 
-
+GameManager* GameManager::gameM = NULL;
 
 GameManager::GameManager()
 {
 }
 
-
 GameManager::~GameManager()
 {
+	delete gameM;
+	delete player;
+	delete comp;
 }
 
 void GameManager::Initialize()
@@ -43,7 +45,7 @@ Move GameManager::GetCurCompMove()
 void GameManager::ChangeScene(Scene scene)
 {
 	switch (scene) {          //引数のシーン
-	case Scene::TITLE:
+	case Scene::TITLE:		
 		m_cScene = new TitleScene();      //タイトルシーンを現在のシーンにする
 		break;
 	case Scene::GAME:

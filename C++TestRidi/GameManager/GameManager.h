@@ -24,12 +24,14 @@ struct ResultRecord
 
 class GameManager
 {
-protected:
-	BaseScene* m_cScene;               //現在のシーン
-	Character* player;
-	Character* comp;
+private:
+	GameManager();
+	BaseScene* m_cScene = NULL;               //現在のシーン
+	Character* player = NULL;
+	Character* comp = NULL;
 	ResultRecord wlt;
 	Move PlayerMove = None;
+	static GameManager * gameM;
 public:
 	enum Scene {
 		TITLE,
@@ -37,7 +39,13 @@ public:
 		JUDGE,
 		RESULT
 	};
-	GameManager();
+	
+
+	static GameManager* getInstance()
+	{		
+		if (gameM == NULL)gameM = new GameManager();
+		return gameM;
+	}
 	~GameManager();
 	void Initialize();
 	Move DecidePlayerMove();
@@ -48,7 +56,8 @@ public:
 	void UpdateCurrentScene();		//現在のシーンを更新する
 	void GetResult(int &win, int &lose, int &tie);
 	void UpdateResult(Result r);
+
+
 };
 
-extern GameManager * gameM;
 

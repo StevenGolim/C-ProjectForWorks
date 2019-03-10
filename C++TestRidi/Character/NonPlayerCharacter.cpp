@@ -20,5 +20,7 @@ Move NonPlayerCharacter::GetMove()
 	case 1: curMove = Move::Rock; return Move::Rock;
 	case 2: curMove = Move::Scissor; return Move::Scissor;
 	case 3: curMove = Move::Paper; return Move::Paper;
+	default: curMove = Move::None; return Move::None;
 	}
+
 }
