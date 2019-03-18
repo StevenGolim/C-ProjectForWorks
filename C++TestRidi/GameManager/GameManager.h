@@ -41,10 +41,10 @@ public:
 	};
 	
 
-	static GameManager* getInstance()
+	static GameManager& getInstance()
 	{		
 		if (gameM == NULL)gameM = new GameManager();
-		return gameM;
+		return *gameM;
 	}
 	~GameManager();
 	void Initialize();

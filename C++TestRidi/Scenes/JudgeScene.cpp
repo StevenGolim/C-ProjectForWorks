@@ -35,13 +35,13 @@ void JudgeScene::ShowWinner(Move user, Move comp)
 	for (time_t t = time(0) + 1; time(0) < t;) {}
 	std::cout <<"Œ‹‰Ê‚ÍF" << std::endl;
 	std::cout << resultArray[user][comp] << std::endl;
-	GameManager::getInstance()->UpdateResult(resultArray[user][comp]);
+	GameManager::getInstance().UpdateResult(resultArray[user][comp]);
 	std::cout << std::endl;
 }
 
 void JudgeScene::Update()
 {
-	ShowWinner(GameManager::getInstance()->GetCurPlayerMove(), GameManager::getInstance()->GetCurCompMove());
+	ShowWinner(GameManager::getInstance().GetCurPlayerMove(), GameManager::getInstance().GetCurCompMove());
 	Sleep(1000);
-	GameManager::getInstance()->ChangeScene(GameManager::Scene::RESULT);
+	GameManager::getInstance().ChangeScene(GameManager::Scene::RESULT);
 }

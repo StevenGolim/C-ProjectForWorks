@@ -27,13 +27,13 @@ GameScene::~GameScene()
 
 void GameScene::Update()
 {
-	Move playerMove = GameManager::getInstance()->DecidePlayerMove();
-	Move compMove = GameManager::getInstance()->GetCompMove();
+	Move playerMove = GameManager::getInstance().DecidePlayerMove();
+	Move compMove = GameManager::getInstance().GetCompMove();
 
 	std::cout << "ŒN‚Ì‹Z : " << playerMove << "\n"
 			<< "‘ŠŽè‚Ì‹Z : " << compMove << "\n"
 			<< std::endl;
 	Sleep(1000);
 
-	GameManager::getInstance()->ChangeScene(GameManager::Scene::JUDGE);
+	GameManager::getInstance().ChangeScene(GameManager::Scene::JUDGE);
 }
